@@ -36,7 +36,17 @@ else:
   print(f"6.feladat : Májusban nem volt csatlakozás!")
 
 #7.feladat
-utolsó dátum = ""
+utolsó_dátum = ""
 for orszag , datum in lista:
-  if utolsó dátum < datum:
-    utolsó dátum = datum
+  if utolsó_dátum < datum:
+    utolsó_dátum = datum
+    utolsó_ország = orszag
+    print(f'7.feladat: Legutoljára csatlakozott orszag :{utolsó_ország}')
+
+#8.feladat
+cnt = collections.Counter()
+for orszag , datum in lista:
+    cnt[datum[0:4]] += 1
+    print(f'8.feladat:Statisztika')
+    for év, darab in ct.items():
+      print(f'{év} - {darab}ország')  
